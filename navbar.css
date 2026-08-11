@@ -41,7 +41,7 @@
 }
 
 .logo-link:hover {
-    color: #ea580c;
+    color: #2563eb;
 }
 
 /* Desktop Menu */
@@ -66,7 +66,7 @@
 }
 
 .nav-link:hover {
-    color: #ea580c;
+    color: #2563eb;
 }
 
 .nav-link::after {
@@ -76,7 +76,7 @@
     left: 0;
     width: 0;
     height: 2px;
-    background: #ea580c;
+    background: #2563eb;
 }
 
 .nav-link:hover::after {

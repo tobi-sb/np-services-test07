@@ -83,7 +83,7 @@
                     </div>
                 </div>
                 <a class="contact-button" href="tel:06 98 63 66 83" id="contact-button"
-                    style="background-color: #ea580c !important; color: white !important;">06 98 63 66 83</a>
+                    style="background-color: #2563eb !important; color: white !important;">06 98 63 66 83</a>
             </div>
             <div class="about-image slide-in-right">
                 <img alt="Serrurier Automobile Magalas" data-idx="1" id="image_1" src="image/1.jpeg" />
@@ -117,7 +117,7 @@
                         required="" type="text" />
                 </div>
                 <button class="submit-button" id="submit-button"
-                    style="background-color: #ea580c !important; color: white !important;" type="submit">Envoyer votre
+                    style="background-color: #2563eb !important; color: white !important;" type="submit">Envoyer votre
                     demande</button>
             </form>
         </div>
@@ -176,7 +176,7 @@
                                 placeholder="Entrez votre nom complet" required="" type="text" />
                         </div>
                         <button class="footer-submit-button" id="footer-button"
-                            style="background-color: #ea580c !important; color: white !important;" type="submit">Envoyer
+                            style="background-color: #2563eb !important; color: white !important;" type="submit">Envoyer
                             votre demande</button>
                     </form>
                 </div>
@@ -280,6 +280,15 @@
                 }
 
                 lastScrollTop = scrollTop;
+
+                const callBtn = document.getElementById('call-float');
+                if (callBtn) {
+                    if (scrollTop > window.innerHeight * 0.6) {
+                        callBtn.classList.remove('call-hidden');
+                    } else {
+                        callBtn.classList.add('call-hidden');
+                    }
+                }
             });
 
             // Scroll animations
@@ -301,6 +310,11 @@
             animatedElements.forEach(el => {
                 observer.observe(el);
             });
+
+            const callBtn = document.getElementById('call-float');
+            if (callBtn && window.pageYOffset > window.innerHeight * 0.6) {
+                callBtn.classList.remove('call-hidden');
+            }
         });
 
         // Fix overflow issue after zoom/unzoom - Force recalculation
@@ -424,7 +438,7 @@
         })();
     </script>
 
-<a href="tel:06 98 63 66 83" class="call-float" title="Appelez-nous" aria-label="Appeler NP Services">
+<a href="tel:06 98 63 66 83" class="call-float call-hidden" id="call-float" title="Appelez-nous" aria-label="Appeler NP Services">
     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
         <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
     </svg>
